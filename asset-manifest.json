@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/grocery-dashboard/static/css/main.de16c556.css",
+    "main.js": "/grocery-dashboard/static/js/main.6c80c4b3.js",
+    "static/js/453.5812a206.chunk.js": "/grocery-dashboard/static/js/453.5812a206.chunk.js",
+    "static/media/hero-img.jpg": "/grocery-dashboard/static/media/hero-img.b9f23f06f082c09cdb3f.jpg",
+    "index.html": "/grocery-dashboard/index.html",
+    "main.de16c556.css.map": "/grocery-dashboard/static/css/main.de16c556.css.map",
+    "main.6c80c4b3.js.map": "/grocery-dashboard/static/js/main.6c80c4b3.js.map",
+    "453.5812a206.chunk.js.map": "/grocery-dashboard/static/js/453.5812a206.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de16c556.css",
+    "static/js/main.6c80c4b3.js"
+  ]
+}
