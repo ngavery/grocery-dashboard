@@ -4,7 +4,7 @@ import foodData from '../data/foodPrices';
 import '../styles/FoodTable.css';
 
 const FoodTable = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [yearRange, setYearRange] = useState({
     start: '2017',
@@ -17,6 +17,12 @@ const FoodTable = () => {
     year => year >= yearRange.start && year <= yearRange.end
   );
 
+  const currencyFormatter = new Intl.NumberFormat(i18n.language, {
+    style: 'currency',
+    currency: 'CAD',
+    minimumFractionDigits: 2
+  });
+
   return (
     <div className="table-container">
       <h3>{t('Table of Food Prices Over Time')}</h3>
@@ -26,7 +32,7 @@ const FoodTable = () => {
           <label>{t('From')}:</label>
           <select 
             value={yearRange.start}
-            onChange={(e) => setYearRange({...yearRange, start: e.target.value})}
+            onChange={(e) => setYearRange({ ...yearRange, start: e.target.value })}
           >
             {allYears.map(year => (
               <option key={`start-${year}`} value={year}>{year}</option>
@@ -38,7 +44,7 @@ const FoodTable = () => {
           <label>{t('To')}:</label>
           <select 
             value={yearRange.end}
-            onChange={(e) => setYearRange({...yearRange, end: e.target.value})}
+            onChange={(e) => setYearRange({ ...yearRange, end: e.target.value })}
           >
             {allYears.map(year => (
               <option key={`end-${year}`} value={year}>{year}</option>
@@ -63,11 +69,11 @@ const FoodTable = () => {
             {filteredYears.map(year => (
               <tr key={year}>
                 <td className="year-column">{year}</td>
-                <td>{foodData.broccoli[year].toFixed(2)} $</td>
-                <td>{foodData.eggs[year].toFixed(2)} $</td>
-                <td>{foodData.milk[year].toFixed(2)} $</td>
-                <td>{foodData.bread[year].toFixed(2)} $</td>
-                <td>{foodData.chicken[year].toFixed(2)} $</td>
+                <td>{currencyFormatter.format(foodData.broccoli[year])}</td>
+                <td>{currencyFormatter.format(foodData.eggs[year])}</td>
+                <td>{currencyFormatter.format(foodData.milk[year])}</td>
+                <td>{currencyFormatter.format(foodData.bread[year])}</td>
+                <td>{currencyFormatter.format(foodData.chicken[year])}</td>
               </tr>
             ))}
           </tbody>

@@ -1,3 +1,16 @@
 .App {
   background: rgb(238, 238, 238);
+  color: #2b2d42;
+}
+
+.h1 {
+  color: #2b2d42;
+}
+
+h1, h2, h3, span {
+  font-family: 'Raleway', sans-serif;
+}
+
+p, li, td {
+  font-family: 'Roboto', sans-serif;
 }

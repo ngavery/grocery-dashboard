@@ -40,7 +40,8 @@ const resources = {
       "A comprehensive dashboard for comparing and visualizing price trends of staple Canadian groceries over the last several years.": "Un tableau de bord complet pour comparer et visualiser les tendances des prix des produits alimentaires de base au Canada au cours des dernières années.",
       "Data source": "Source des données",
       "Statistics Canada": "Statistique Canada",
-      "Developed by": "Développé par"
+      "Developed by": "Développé par",
+      "All prices shown represent average prices from January of each year.": "Tous les prix affichés représentent les prix moyens de janvier de chaque année.",
     }
   }
 };
